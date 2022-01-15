@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente REST</title>
+</head>
+
+<body>
+    <!-- <script src="REST.js"></script> -->
+    <!-- <script>
+        async function getREST() {
+
+            const URL = 'https://cors-anywhere.herokuapp.com/http://ken.utad.pt:8181/check/';
+            const NumConta = '12345678';
+            const Valor = '1000';
+            const response = await fetch(URL + NumConta + '/amount/' + Valor);
+
+            const data = await response.json();
+            console.log(data);
+            console.log(data.date, 'vindo do data.');
+            console.log(data.checkID, 'vindo do data.');
+            const {date, checkID} = data;
+            console.log(date, 'vindo do const');
+            console.log(checkID, 'vindo do const');
+            document.getElementById('GetDate').textContent = date;
+            document.getElementById('GetCheckID').textContent = checkID;
+        }
+        getREST();
+    </script> -->
+    Cliente REST
+    <div>
+        <br>
+        <form id="frmCheq" action="rest.html" d="get">
+            <div>
+                <label for="NConta">Número de Conta</label><br>
+                <input name="NConta" id="NConta" type="text" placeholder="Número de Conta">
+            </div>
+            <div>
+                <label for="ValorCheque">Valor</label><br>
+                <input name="ValorCheque" id="ValorCheque" type="text" placeholder="Valor do Cheque">
+            </div>
+            <button id="SubmitREST" type="submit">Submeter</button>
+        </form>
+
+    
+
+        <script>
+            const CriarCheq = document.getElementById('frmCheq');
+
+            CriarCheq.addEventListener ('submit', function(subVal){
+
+                //subVal.preventDefault();
+                console.log(subVal);
+
+                NumConta = document.getElementById('NConta').value;
+                console.log(NumConta);
+                Valor = document.getElementById('ValorCheque').value;
+                console.log(Valor);
+            })
+                     
+
+        </script>
+</body>
+
+<footer style="position: absolute; bottom: 0;">
+    Tiago Romão
+    <br>
+    UTAD 75309
+</footer>
+
+</html>
