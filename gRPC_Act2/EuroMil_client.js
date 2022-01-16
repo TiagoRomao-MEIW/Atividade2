@@ -12,8 +12,8 @@ const client = new EMilDefinition('ken.utad.pt:8282', grpc.credentials.createIns
 
 // Envio do pedido em que key=
 client.RegisterEuroMil({
-  "checkID": "1234567812345678",
-  "key":"10 20 30 40 50 60 70"
+  "key":"10 20 30 40 50 60 70",
+  "checkID": "1234567812345678"
 }, (err, message) => {
     if (err) throw err
     console.log(message)
